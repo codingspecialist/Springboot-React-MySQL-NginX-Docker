@@ -13,7 +13,7 @@ const Detail = (props) => {
   });
 
   useEffect(() => {
-    fetch('http://13.209.74.175:8080/book/' + id)
+    fetch('http://13.125.111.173:8080/book/' + id)
       .then((res) => res.json())
       .then((res) => {
         setBook(res);
@@ -21,7 +21,7 @@ const Detail = (props) => {
   }, []);
 
   const deleteBook = () => {
-    fetch('http://13.209.74.175:8080/book/' + id, {
+    fetch('http://13.125.111.173:8080/book/' + id, {
       method: 'DELETE',
     })
       .then((res) => res.text())
