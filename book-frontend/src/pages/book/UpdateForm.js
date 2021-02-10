@@ -12,7 +12,7 @@ const UpdateForm = (props) => {
   });
 
   useEffect(() => {
-    fetch('http://13.209.74.175:8080/book' + id)
+    fetch('http://13.209.74.175:8080/book/' + id)
       .then((res) => res.json())
       .then((res) => {
         setBook(res);
@@ -29,7 +29,7 @@ const UpdateForm = (props) => {
   const submitBook = (e) => {
     e.preventDefault(); // submit이 action을 안타고 자기 할일을 그만함.
 
-    fetch('http://13.209.74.175:8080/book' + id, {
+    fetch('http://13.209.74.175:8080/book/' + id, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',

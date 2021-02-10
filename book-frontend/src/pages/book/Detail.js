@@ -13,7 +13,7 @@ const Detail = (props) => {
   });
 
   useEffect(() => {
-    fetch('http://13.209.74.175:8080/book' + id)
+    fetch('http://13.209.74.175:8080/book/' + id)
       .then((res) => res.json())
       .then((res) => {
         setBook(res);
