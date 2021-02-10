@@ -6,7 +6,7 @@ const Home = () => {
 
   // 함수 실행시 최초 한번 실행되는 것 + 상태값이 변경될때마다 실행
   useEffect(() => {
-    fetch('http://52.79.99.4:8080/book')
+    fetch(process.env.API_URL)
       .then((res) => res.json())
       .then((res) => {
         setBooks(res);
