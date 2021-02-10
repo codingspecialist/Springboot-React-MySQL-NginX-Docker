@@ -18,7 +18,7 @@ const SaveForm = (props) => {
   const submitBook = (e) => {
     e.preventDefault(); // submit이 action을 안타고 자기 할일을 그만함.
 
-    fetch('http://localhost:8080/book', {
+    fetch('http://52.79.99.4:8080/book', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',

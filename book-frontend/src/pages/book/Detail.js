@@ -13,7 +13,7 @@ const Detail = (props) => {
   });
 
   useEffect(() => {
-    fetch('http://localhost:8080/book/' + id)
+    fetch('http://52.79.99.4:8080/book/' + id)
       .then((res) => res.json())
       .then((res) => {
         setBook(res);
@@ -21,7 +21,7 @@ const Detail = (props) => {
   }, []);
 
   const deleteBook = () => {
-    fetch('http://localhost:8080/book/' + id, {
+    fetch('http://52.79.99.4:8080/book/' + id, {
       method: 'DELETE',
     })
       .then((res) => res.text())
