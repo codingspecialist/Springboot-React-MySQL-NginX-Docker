@@ -5,10 +5,10 @@ server:
       enabled: true
 
 spring:
-  profiles:
-    active:
-      - dev
-
+  config:
+    activate:
+      on-profile:
+        - dev
 ---
 server:
   port: 8081
