@@ -21,7 +21,7 @@ const Detail = (props) => {
   }, []);
 
   const deleteBook = () => {
-    fetch(process.env.API_URL + id, {
+    fetch('http://13.209.74.175:8080/book/' + id, {
       method: 'DELETE',
     })
       .then((res) => res.text())
